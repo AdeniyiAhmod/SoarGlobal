@@ -18,6 +18,26 @@ npm run lint
 npm run build
 ```
 
+## Vercel Deployment
+
+Recommended Vercel settings:
+
+- Framework preset: `Next.js`
+- Install command: `npm install`
+- Build command: `npm run build`
+- Output directory: leave as Vercel default
+- Production branch for the current PR: `codex/soar-global-site`
+
+The site builds without email environment variables, so it can be deployed for a team preview now. Contact and early quote forms use Resend through `app/api/enquiry/route.ts`; add these variables before expecting form submissions to send:
+
+```bash
+RESEND_API_KEY=
+CONTACT_EMAIL=info@soarglobals.com
+RESEND_FROM="Soar Global <hello@soarglobals.com>"
+```
+
+`RESEND_FROM` must use a sender domain verified in Resend. Until that is ready, direct phone, email and WhatsApp links still work on the live site.
+
 ## Image Specs
 
 Hero carousel assets:
