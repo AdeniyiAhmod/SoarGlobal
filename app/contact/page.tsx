@@ -23,7 +23,12 @@ export default function ContactPage() {
               <ContactLink icon={Send} title="WhatsApp" value={contact.whatsapp} href={contact.whatsappHref} />
             </div>
           </div>
-          <QuoteForm heading="Send an Enquiry" />
+          <QuoteForm
+            heading="Send an Enquiry"
+            submitLabel="Send Enquiry"
+            subjectLabel="Contact enquiry"
+            successMessage="Thank you. Your enquiry has been sent to Soar Global."
+          />
         </div>
       </section>
     </>

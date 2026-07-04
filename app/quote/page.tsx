@@ -40,9 +40,10 @@ export default function QuotePage() {
           </aside>
           <QuoteForm
             heading="Send Early Enquiry"
-            intro="Share the basics now. This opens your email app with the details ready to send, so no quote data is stored on the website."
+            intro="Share the basics now. The team will receive your enquiry by email and follow up when quote handling opens."
             submitLabel="Send Early Enquiry"
             subjectLabel="Early quote enquiry"
+            successMessage="Thank you. Your early enquiry has been sent to Soar Global."
           />
         </div>
       </section>
