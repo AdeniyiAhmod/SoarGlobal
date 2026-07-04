@@ -30,21 +30,33 @@ export function ButtonLink({
   icon: Icon = ArrowRight,
 }: ButtonLinkProps) {
   const external = href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("tel:");
+  const isQuoteButton = typeof children === "string" && children.toLowerCase().includes("get a quote");
   const classes = `inline-flex min-h-11 items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-bold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ${variants[variant]} ${className}`;
+  const content = (
+    <>
+      <span className={isQuoteButton ? "flex flex-col items-center leading-tight" : ""}>
+        <span>{children}</span>
+        {isQuoteButton ? (
+          <span className="mt-0.5 text-[10px] font-semibold uppercase tracking-[0.08em] opacity-70">
+            Coming soon!
+          </span>
+        ) : null}
+      </span>
+      <Icon aria-hidden="true" size={17} />
+    </>
+  );
 
   if (external) {
     return (
       <a href={href} className={classes} onClick={onClick}>
-        {children}
-        <Icon aria-hidden="true" size={17} />
+        {content}
       </a>
     );
   }
 
   return (
     <Link href={href} className={classes} onClick={onClick}>
-      {children}
-      <Icon aria-hidden="true" size={17} />
+      {content}
     </Link>
   );
 }

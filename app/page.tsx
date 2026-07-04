@@ -1,4 +1,3 @@
-import { CtaBand } from "@/components/CtaBand";
 import { FaqSection } from "@/components/FaqSection";
 import { Hero } from "@/components/Hero";
 import { IndustryBand } from "@/components/IndustryBand";
@@ -11,7 +10,6 @@ export default function Home() {
       <ServiceGrid />
       <IndustryBand />
       <FaqSection />
-      <CtaBand />
     </>
   );
 }
