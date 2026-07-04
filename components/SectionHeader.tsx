@@ -16,11 +16,11 @@ export function SectionHeader({
   return (
     <div className={`${align === "center" ? "mx-auto text-center" : ""} max-w-3xl`}>
       {eyebrow ? (
-        <p className={`mb-2 text-sm font-black uppercase tracking-wide ${inverse ? "text-gold-500" : "text-gold-600"}`}>
+        <p className={`mb-2 text-sm font-semibold uppercase tracking-wide ${inverse ? "text-gold-500" : "text-gold-600"}`}>
           {eyebrow}
         </p>
       ) : null}
-      <h2 className={`gold-underline text-3xl font-black tracking-tight sm:text-4xl ${inverse ? "text-white" : "text-navy-950"}`}>
+      <h2 className={`gold-underline text-3xl font-extrabold tracking-tight sm:text-4xl ${inverse ? "text-white" : "text-navy-950"}`}>
         {title}
       </h2>
       {text ? (

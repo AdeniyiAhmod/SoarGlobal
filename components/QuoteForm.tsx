@@ -29,7 +29,7 @@ export function QuoteForm({ heading = "Request a Quote" }: QuoteFormProps) {
 
   return (
     <form onSubmit={handleSubmit} className="rounded border border-navy-950/10 bg-white p-6 shadow-soft">
-      <h2 className="text-2xl font-black uppercase text-navy-950">{heading}</h2>
+      <h2 className="text-2xl font-extrabold uppercase text-navy-950">{heading}</h2>
       <p className="mt-2 text-sm leading-6 text-navy-950/68">
         Tell us what you need to move or source. This form opens your email app with the details ready to send.
       </p>
@@ -59,7 +59,7 @@ export function QuoteForm({ heading = "Request a Quote" }: QuoteFormProps) {
       </div>
       <button
         type="submit"
-        className="mt-6 inline-flex min-h-12 w-full items-center justify-center rounded bg-gold-500 px-5 py-3 text-sm font-black uppercase tracking-wide text-navy-950 transition hover:bg-gold-600 sm:w-auto"
+        className="mt-6 inline-flex min-h-12 w-full items-center justify-center rounded bg-gold-500 px-5 py-3 text-sm font-bold uppercase tracking-wide text-navy-950 transition hover:bg-gold-600 sm:w-auto"
       >
         Send Quote Request
       </button>

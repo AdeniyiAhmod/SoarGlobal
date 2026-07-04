@@ -59,12 +59,12 @@ export function ServiceGrid({ detailed = false }: ServiceGridProps) {
               >
                 <div className={`grid min-h-[520px] lg:grid-cols-2 ${index % 2 === 1 ? "lg:[&>*:first-child]:order-2" : ""}`}>
                   <div className="flex flex-col justify-center p-6 sm:p-8 lg:p-12">
-                    <div className={`inline-flex w-fit items-center rounded-full px-3 py-1 text-xs font-black uppercase tracking-[0.12em] ${
+                    <div className={`inline-flex w-fit items-center rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] ${
                       index === 1 ? "bg-white/10 text-gold-400" : "bg-gold-500/12 text-gold-600"
                     }`}>
                       {item.eyebrow}
                     </div>
-                    <h3 className="mt-5 max-w-md text-3xl font-black leading-tight sm:text-4xl">
+                    <h3 className="mt-5 max-w-md text-3xl font-extrabold leading-tight sm:text-4xl">
                       {item.service.title}
                     </h3>
                     <p className={`mt-4 max-w-md text-base leading-7 ${index === 1 ? "text-white/72" : "text-navy-950/68"}`}>
@@ -124,7 +124,7 @@ function ServiceCard({ service, detailed }: { service: Service; detailed: boolea
       <div className="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-gold-500/12 text-gold-600">
         <service.icon aria-hidden="true" size={23} />
       </div>
-      <h3 className="mt-5 text-lg font-black text-navy-950">{service.title}</h3>
+      <h3 className="mt-5 text-lg font-bold text-navy-950">{service.title}</h3>
       <p className="mt-3 text-sm leading-6 text-navy-950/68">{detailed ? service.body : service.excerpt}</p>
       <Link href={`/services#${service.slug}`} className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-gold-600 hover:text-navy-950">
         Learn more

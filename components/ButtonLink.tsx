@@ -31,7 +31,7 @@ export function ButtonLink({
 }: ButtonLinkProps) {
   const external = href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("tel:");
   const isQuoteButton = typeof children === "string" && children.toLowerCase().includes("get a quote");
-  const classes = `inline-flex min-h-11 items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-bold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ${variants[variant]} ${className}`;
+  const classes = `inline-flex min-h-11 items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ${variants[variant]} ${className}`;
   const content = (
     <>
       <span className={isQuoteButton ? "flex flex-col items-center leading-tight" : ""}>

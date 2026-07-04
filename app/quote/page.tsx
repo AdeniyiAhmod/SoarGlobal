@@ -20,7 +20,7 @@ export default function QuotePage() {
         <div className="container-shell grid gap-8 lg:grid-cols-[1.15fr_0.85fr]">
           <QuoteForm />
           <aside className="rounded bg-navy-950 p-7 text-white shadow-soft">
-            <h2 className="text-2xl font-black uppercase">Prefer direct contact?</h2>
+            <h2 className="text-2xl font-extrabold uppercase">Prefer direct contact?</h2>
             <p className="mt-3 text-sm leading-6 text-white/72">
               Reach us by phone, email or WhatsApp and include the goods, route, timeline and service you need.
             </p>
@@ -29,7 +29,7 @@ export default function QuotePage() {
                 <a key={link.title} href={link.href} className="flex gap-4 rounded border border-white/10 p-4 hover:border-gold-500">
                   <link.icon className="text-gold-500" size={28} aria-hidden="true" />
                   <span>
-                    <span className="block text-xs font-black uppercase text-white/50">{link.title}</span>
+                    <span className="block text-xs font-bold uppercase text-white/50">{link.title}</span>
                     <span className="mt-1 block text-sm font-semibold text-white/85">{link.value}</span>
                   </span>
                 </a>

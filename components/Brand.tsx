@@ -20,7 +20,7 @@ export function Brand({ inverse = false, compact = false }: BrandProps) {
         />
       </span>
       <span className="leading-tight">
-        <span className={`block text-lg font-black tracking-wide ${inverse ? "text-white" : "text-navy-950"}`}>
+        <span className={`block text-lg font-extrabold tracking-wide ${inverse ? "text-white" : "text-navy-950"}`}>
           Soar Global
         </span>
         {!compact ? (

@@ -9,7 +9,7 @@ export function IndustryBand({ expanded = false }: IndustryBandProps) {
     <section className="overflow-hidden bg-slate-50 py-14">
       <div className="container-shell">
         <div className="text-center">
-          <h2 className="gold-underline text-3xl font-black tracking-tight text-navy-950">Industries We Serve</h2>
+          <h2 className="gold-underline text-3xl font-extrabold tracking-tight text-navy-950">Industries We Serve</h2>
           <p className="mx-auto mt-5 max-w-2xl text-sm leading-6 text-navy-950/64">
             Support for common trade, retail and operational sectors.
           </p>
