@@ -54,14 +54,17 @@ export default function AboutPage() {
                 sizes="(min-width: 1024px) 52vw, 100vw"
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-tr from-navy-950/82 via-navy-950/28 to-transparent" />
-              <div className="absolute bottom-0 left-0 max-w-md p-6 text-white sm:p-8">
-                <p className="text-sm font-semibold uppercase tracking-[0.16em] text-gold-400">
-                  Belfast to global markets
-                </p>
-                <p className="mt-4 text-2xl font-extrabold leading-tight">
-                  Built for customers who need goods sourced, moved and delivered without confusion.
-                </p>
+              <div className="absolute inset-0 bg-gradient-to-tr from-navy-950/90 via-navy-950/45 to-navy-950/10" />
+              <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-navy-950 via-navy-950/82 to-transparent" />
+              <div className="absolute bottom-0 left-0 max-w-md p-4 sm:p-6">
+                <div className="rounded-2xl bg-[rgba(6,23,44,0.88)] p-5 text-white shadow-2xl ring-1 ring-white/15 backdrop-blur-sm sm:p-6">
+                  <p className="text-sm font-bold uppercase tracking-[0.14em] text-[#f1d28a]">
+                    Belfast to global markets
+                  </p>
+                  <p className="mt-4 text-2xl font-extrabold leading-tight">
+                    Built for customers who need goods sourced, moved and delivered without confusion.
+                  </p>
+                </div>
               </div>
             </div>
 
