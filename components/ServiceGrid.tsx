@@ -180,7 +180,7 @@ export function ServiceGrid({ detailed = false }: ServiceGridProps) {
     <section className={detailed ? "section-padding bg-white" : "bg-white py-16 sm:py-20 lg:py-24"}>
       <div className="container-shell">
         <SectionHeader
-          title={detailed ? "Services" : "What We Handle"}
+          title={detailed ? "Source. Move. Deliver." : "What We Handle"}
           text={detailed ? "Straightforward trade and logistics support, without unnecessary complexity." : "A focused set of services for moving, sourcing and delivering goods."}
         />
         {detailed ? null : (
