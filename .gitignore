@@ -29,6 +29,7 @@ pnpm-debug.log*
 # local verification artifacts
 output
 .next-dev.pid
+.next-dev*.log
 
 # typescript
 *.tsbuildinfo

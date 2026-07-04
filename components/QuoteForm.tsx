@@ -5,13 +5,21 @@ import { contact, services } from "@/lib/site";
 
 type QuoteFormProps = {
   heading?: string;
+  intro?: string;
+  submitLabel?: string;
+  subjectLabel?: string;
 };
 
-export function QuoteForm({ heading = "Request a Quote" }: QuoteFormProps) {
+export function QuoteForm({
+  heading = "Request a Quote",
+  intro = "Tell us what you need to move or source. This form opens your email app with the details ready to send.",
+  submitLabel = "Send Quote Request",
+  subjectLabel = "Quote request",
+}: QuoteFormProps) {
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    const subject = encodeURIComponent(`Quote request from ${data.get("name") ?? "website visitor"}`);
+    const subject = encodeURIComponent(`${subjectLabel} from ${data.get("name") ?? "website visitor"}`);
     const body = encodeURIComponent(
       [
         `Name: ${data.get("name") ?? ""}`,
@@ -30,9 +38,7 @@ export function QuoteForm({ heading = "Request a Quote" }: QuoteFormProps) {
   return (
     <form onSubmit={handleSubmit} className="rounded border border-navy-950/10 bg-white p-6 shadow-soft">
       <h2 className="text-2xl font-bold uppercase text-navy-950 sm:font-extrabold">{heading}</h2>
-      <p className="mt-2 text-sm leading-6 text-navy-950/68">
-        Tell us what you need to move or source. This form opens your email app with the details ready to send.
-      </p>
+      <p className="mt-2 text-sm leading-6 text-navy-950/68">{intro}</p>
       <div className="mt-6 grid gap-4 sm:grid-cols-2">
         <Field label="Full name" name="name" required />
         <Field label="Email address" name="email" type="email" required />
@@ -61,7 +67,7 @@ export function QuoteForm({ heading = "Request a Quote" }: QuoteFormProps) {
         type="submit"
         className="mt-6 inline-flex min-h-12 w-full items-center justify-center rounded bg-gold-500 px-5 py-3 text-sm font-bold uppercase tracking-wide text-navy-950 transition hover:bg-gold-600 sm:w-auto"
       >
-        Send Quote Request
+        {submitLabel}
       </button>
     </form>
   );
