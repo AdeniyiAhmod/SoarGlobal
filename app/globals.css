@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #0b1728;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background: #d7a32c;
+  color: #06172c;
+}
+
+.container-shell {
+  @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+.section-padding {
+  @apply py-14 sm:py-16 lg:py-20;
+}
+
+.gold-underline {
+  @apply relative inline-flex items-center justify-center pb-3;
+}
+
+.gold-underline::after {
+  content: "";
+  @apply absolute bottom-0 h-1 w-14 rounded-full bg-gold-500;
+}
