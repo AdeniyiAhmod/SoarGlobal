@@ -29,7 +29,7 @@ export default function BusinessSolutionsPage() {
             {businessSolutions.map((solution) => (
               <article key={solution.title} className="rounded border border-navy-950/10 bg-white p-6 shadow-sm">
                 <solution.icon className="text-gold-600" size={36} aria-hidden="true" />
-                <h2 className="mt-5 text-xl font-extrabold uppercase text-navy-950">{solution.title}</h2>
+                <h2 className="mt-5 text-xl font-bold uppercase text-navy-950 sm:font-extrabold">{solution.title}</h2>
                 <p className="mt-3 text-sm leading-6 text-navy-950/70">{solution.text}</p>
               </article>
             ))}

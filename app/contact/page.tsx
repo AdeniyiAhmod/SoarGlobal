@@ -14,7 +14,7 @@ export default function ContactPage() {
       <section className="section-padding bg-slate-50">
         <div className="container-shell grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
           <div className="rounded bg-navy-950 p-7 text-white shadow-soft">
-            <h1 className="text-3xl font-extrabold tracking-tight">Contact Soar Global</h1>
+            <h1 className="text-3xl font-bold tracking-tight sm:font-extrabold">Contact Soar Global</h1>
             <p className="mt-3 text-sm leading-6 text-white/68">Call, email or send a short enquiry.</p>
             <div className="mt-6 grid gap-5">
               <ContactLink icon={MapPin} title="Visit us" value={contact.address} href="/contact" />

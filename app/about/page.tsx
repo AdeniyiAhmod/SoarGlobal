@@ -58,10 +58,10 @@ export default function AboutPage() {
               <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-navy-950 via-navy-950/82 to-transparent" />
               <div className="absolute bottom-0 left-0 max-w-md p-4 sm:p-6">
                 <div className="rounded-2xl bg-[rgba(6,23,44,0.88)] p-5 text-white shadow-2xl ring-1 ring-white/15 backdrop-blur-sm sm:p-6">
-                  <p className="text-sm font-bold uppercase tracking-[0.14em] text-[#f1d28a]">
+                  <p className="text-xs font-medium uppercase tracking-[0.12em] text-[#f1d28a] sm:text-sm sm:font-semibold">
                     Belfast to global markets
                   </p>
-                  <p className="mt-4 text-2xl font-extrabold leading-tight">
+                  <p className="mt-4 text-xl font-semibold leading-tight sm:text-2xl sm:font-bold">
                     Built for customers who need goods sourced, moved and delivered without confusion.
                   </p>
                 </div>
@@ -69,10 +69,10 @@ export default function AboutPage() {
             </div>
 
             <div className="grid content-center gap-5 rounded-2xl border border-navy-950/10 bg-slate-50 p-6 sm:p-8 lg:p-10">
-              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-gold-600">
+              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-gold-600 sm:text-sm">
                 How we work
               </p>
-              <h2 className="text-3xl font-extrabold leading-tight text-navy-950 sm:text-4xl">
+              <h2 className="text-3xl font-bold leading-tight text-navy-950 sm:text-4xl sm:font-extrabold">
                 Practical trade support, shaped around the job.
               </h2>
               <div className="grid gap-4 text-base leading-8 text-navy-950/72">
@@ -101,7 +101,7 @@ export default function AboutPage() {
                 <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gold-500/12 text-gold-600">
                   <item.icon size={23} aria-hidden="true" />
                 </div>
-                <h2 className="mt-5 text-xl font-extrabold text-navy-950">{item.title}</h2>
+                <h2 className="mt-5 text-xl font-bold text-navy-950 sm:font-extrabold">{item.title}</h2>
                 <p className="mt-3 text-sm leading-6 text-navy-950/68">{item.text}</p>
               </article>
             ))}
@@ -112,7 +112,7 @@ export default function AboutPage() {
       <section className="bg-white py-14 sm:py-16 lg:py-20">
         <div className="container-shell grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
           <div>
-            <h2 className="gold-underline text-3xl font-extrabold tracking-tight text-navy-950">
+            <h2 className="gold-underline text-3xl font-bold tracking-tight text-navy-950 sm:font-extrabold">
               Why Soar Global?
             </h2>
             <p className="mt-5 max-w-xl text-base leading-7 text-navy-950/70">
@@ -124,7 +124,7 @@ export default function AboutPage() {
             {position.map((item) => (
               <div key={item.label} className="rounded-2xl border border-navy-950/10 bg-white p-5 shadow-sm">
                 <item.icon className="text-gold-600" size={24} aria-hidden="true" />
-                <p className="mt-5 text-2xl font-extrabold text-navy-950">{item.value}</p>
+                <p className="mt-5 text-2xl font-bold text-navy-950 sm:font-extrabold">{item.value}</p>
                 <p className="mt-2 text-sm leading-6 text-navy-950/62">{item.label}</p>
               </div>
             ))}

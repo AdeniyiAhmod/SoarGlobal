@@ -20,7 +20,7 @@ export default function QuotePage() {
         <div className="container-shell grid gap-8 lg:grid-cols-[1.15fr_0.85fr]">
           <QuoteForm />
           <aside className="rounded bg-navy-950 p-7 text-white shadow-soft">
-            <h2 className="text-2xl font-extrabold uppercase">Prefer direct contact?</h2>
+            <h2 className="text-2xl font-bold uppercase sm:font-extrabold">Prefer direct contact?</h2>
             <p className="mt-3 text-sm leading-6 text-white/72">
               Reach us by phone, email or WhatsApp and include the goods, route, timeline and service you need.
             </p>

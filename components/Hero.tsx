@@ -61,10 +61,10 @@ export function Hero() {
 
       <div className="container-shell relative flex min-h-[560px] items-center py-20 sm:min-h-[620px]">
         <div className="max-w-3xl text-white">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold-400">
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-400 sm:text-sm">
             {slides[activeSlide].label}
           </p>
-          <h1 className="mt-4 max-w-2xl text-4xl font-extrabold leading-tight tracking-tight sm:text-6xl lg:text-7xl">
+          <h1 className="mt-4 max-w-2xl text-4xl font-bold leading-tight tracking-tight sm:text-6xl sm:font-extrabold lg:text-7xl">
             {slides[activeSlide].title}
           </h1>
           <p className="mt-5 max-w-xl text-base leading-7 text-white/82 sm:text-lg">

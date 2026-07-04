@@ -5,7 +5,7 @@ export function ProcessSteps() {
     <section className="bg-white py-12">
       <div className="container-shell">
         <div className="text-center">
-          <h2 className="gold-underline text-2xl font-extrabold uppercase tracking-wide text-navy-950">How It Works</h2>
+          <h2 className="gold-underline text-2xl font-bold uppercase tracking-wide text-navy-950 sm:font-extrabold">How It Works</h2>
         </div>
         <div className="mt-10 grid gap-6 md:grid-cols-5">
           {processSteps.map((step, index) => (

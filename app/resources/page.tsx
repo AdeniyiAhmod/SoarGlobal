@@ -32,18 +32,18 @@ export default function ResourcesPage() {
                 id={item.title.toLowerCase().replaceAll(" ", "-")}
                 className="scroll-mt-32 rounded border border-navy-950/10 bg-slate-50 p-6"
               >
-                <h2 className="text-xl font-extrabold uppercase text-navy-950">{item.title}</h2>
+                <h2 className="text-xl font-bold uppercase text-navy-950 sm:font-extrabold">{item.title}</h2>
                 <p className="mt-3 text-sm leading-6 text-navy-950/70">{item.text}</p>
               </article>
             ))}
             <article id="privacy-policy" className="scroll-mt-32 rounded border border-navy-950/10 bg-slate-50 p-6">
-              <h2 className="text-xl font-extrabold uppercase text-navy-950">Privacy Policy</h2>
+              <h2 className="text-xl font-bold uppercase text-navy-950 sm:font-extrabold">Privacy Policy</h2>
               <p className="mt-3 text-sm leading-6 text-navy-950/70">
                 Soar Global only uses enquiry details to respond to customer requests and coordinate requested services.
               </p>
             </article>
             <article id="terms-conditions" className="scroll-mt-32 rounded border border-navy-950/10 bg-slate-50 p-6">
-              <h2 className="text-xl font-extrabold uppercase text-navy-950">Terms & Conditions</h2>
+              <h2 className="text-xl font-bold uppercase text-navy-950 sm:font-extrabold">Terms & Conditions</h2>
               <p className="mt-3 text-sm leading-6 text-navy-950/70">
                 Quotes, timelines and service availability are confirmed directly after reviewing shipment, sourcing or delivery requirements.
               </p>

@@ -195,12 +195,12 @@ export function ServiceGrid({ detailed = false }: ServiceGridProps) {
               >
                 <div className={`grid min-h-[520px] lg:grid-cols-2 ${index % 2 === 1 ? "lg:[&>*:first-child]:order-2" : ""}`}>
                   <div className="flex flex-col justify-center p-6 sm:p-8 lg:p-12">
-                    <div className={`inline-flex w-fit items-center rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] ${
+                    <div className={`inline-flex w-fit items-center rounded-full px-3 py-1 text-xs font-medium uppercase tracking-[0.1em] sm:font-semibold ${
                       index === 1 ? "bg-white/10 text-gold-400" : "bg-gold-500/12 text-gold-600"
                     }`}>
                       {item.eyebrow}
                     </div>
-                    <h3 className="mt-5 max-w-md text-3xl font-extrabold leading-tight sm:text-4xl">
+                    <h3 className="mt-5 max-w-md text-3xl font-bold leading-tight sm:text-4xl sm:font-extrabold">
                       {item.service.title}
                     </h3>
                     <p className={`mt-4 max-w-md text-base leading-7 ${index === 1 ? "text-white/72" : "text-navy-950/68"}`}>
@@ -329,7 +329,7 @@ function ServiceModal({ service, onClose }: { service: Service; onClose: () => v
           <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gold-500/12 text-gold-600">
             <service.icon aria-hidden="true" size={23} />
           </div>
-          <h2 id="service-modal-title" className="mt-5 text-3xl font-extrabold leading-tight text-navy-950 sm:text-4xl">
+          <h2 id="service-modal-title" className="mt-5 text-3xl font-bold leading-tight text-navy-950 sm:text-4xl sm:font-extrabold">
             {service.title}
           </h2>
           <p className="mt-4 text-base leading-7 text-navy-950/68">

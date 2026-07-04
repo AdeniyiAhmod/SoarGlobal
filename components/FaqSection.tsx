@@ -12,10 +12,10 @@ export function FaqSection() {
     <section className="bg-white py-16 sm:py-20 lg:py-24">
       <div className="container-shell grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
         <div className="lg:sticky lg:top-28">
-          <p className="text-sm font-semibold uppercase tracking-[0.16em] text-gold-600">
+          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-gold-600 sm:text-sm">
             Questions
           </p>
-          <h2 className="mt-4 max-w-md text-4xl font-extrabold leading-tight tracking-tight text-navy-950 sm:text-5xl">
+          <h2 className="mt-4 max-w-md text-3xl font-bold leading-tight tracking-tight text-navy-950 sm:text-5xl sm:font-extrabold">
             Clear answers before goods move.
           </h2>
           <p className="mt-5 max-w-md text-base leading-7 text-navy-950/68">

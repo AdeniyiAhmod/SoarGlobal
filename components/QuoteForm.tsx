@@ -29,7 +29,7 @@ export function QuoteForm({ heading = "Request a Quote" }: QuoteFormProps) {
 
   return (
     <form onSubmit={handleSubmit} className="rounded border border-navy-950/10 bg-white p-6 shadow-soft">
-      <h2 className="text-2xl font-extrabold uppercase text-navy-950">{heading}</h2>
+      <h2 className="text-2xl font-bold uppercase text-navy-950 sm:font-extrabold">{heading}</h2>
       <p className="mt-2 text-sm leading-6 text-navy-950/68">
         Tell us what you need to move or source. This form opens your email app with the details ready to send.
       </p>
