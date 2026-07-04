@@ -7,28 +7,30 @@ import { contact, navItems } from "@/lib/site";
 export function Footer() {
   return (
     <footer className="bg-navy-950 text-white">
-      <div className="container-shell grid gap-10 py-12 md:grid-cols-[1.2fr_0.8fr_1fr]">
+      <div className="container-shell grid gap-10 py-12 md:grid-cols-[1.2fr_1.8fr]">
         <div>
           <Brand inverse />
           <p className="mt-4 max-w-sm text-sm leading-6 text-white/68">
             Trade, sourcing and logistics support from Northern Ireland to global markets.
           </p>
         </div>
-        <FooterColumn title="Navigate" items={navItems} />
-        <div>
-          <h3 className="text-sm font-bold">Contact</h3>
-          <div className="mt-4 grid gap-3 text-sm text-white/72">
-            <a href={contact.phoneHref} className="inline-flex items-center gap-3 hover:text-gold-500">
-              <Phone size={17} aria-hidden="true" />
-              {contact.phone}
-            </a>
-            <a href={`mailto:${contact.email}`} className="inline-flex items-center gap-3 hover:text-gold-500">
-              <Mail size={17} aria-hidden="true" />
-              {contact.email}
-            </a>
-            <ButtonLink href="/quote" className="mt-2 w-fit">
-              Get a Quote
-            </ButtonLink>
+        <div className="grid grid-cols-2 gap-8">
+          <FooterColumn title="Navigate" items={navItems} />
+          <div>
+            <h3 className="text-sm font-bold">Contact</h3>
+            <div className="mt-4 grid gap-3 text-sm text-white/72">
+              <a href={contact.phoneHref} className="inline-flex items-start gap-2 hover:text-gold-500 sm:items-center sm:gap-3">
+                <Phone className="mt-0.5 shrink-0 sm:mt-0" size={17} aria-hidden="true" />
+                <span>{contact.phone}</span>
+              </a>
+              <a href={`mailto:${contact.email}`} className="inline-flex items-start gap-2 break-all hover:text-gold-500 sm:items-center sm:gap-3">
+                <Mail className="mt-0.5 shrink-0 sm:mt-0" size={17} aria-hidden="true" />
+                <span>{contact.email}</span>
+              </a>
+              <ButtonLink href="/quote" className="mt-2 w-fit px-4">
+                Get a Quote
+              </ButtonLink>
+            </div>
           </div>
         </div>
       </div>

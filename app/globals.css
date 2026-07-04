@@ -54,37 +54,15 @@ textarea {
   @apply absolute bottom-0 h-1 w-14 rounded-full bg-gold-500;
 }
 
-.service-stack-card {
-  transform-origin: top center;
-}
-
 .service-stack-image {
   transform: scale(1.02);
 }
 
 @supports (animation-timeline: view()) {
-  .service-stack-card {
-    animation: service-card-rise both ease-out;
-    animation-timeline: view();
-    animation-range: entry 8% cover 34%;
-  }
-
   .service-stack-image {
     animation: service-image-drift both ease-out;
     animation-timeline: view();
     animation-range: entry 8% cover 40%;
-  }
-}
-
-@keyframes service-card-rise {
-  from {
-    opacity: 0.78;
-    transform: translateY(48px) scale(0.97);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
   }
 }
 
@@ -95,5 +73,23 @@ textarea {
 
   to {
     transform: scale(1.02) translateY(0);
+  }
+}
+
+.industry-marquee-track {
+  animation: industry-marquee 34s linear infinite;
+}
+
+.industry-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes industry-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 0.5rem));
   }
 }

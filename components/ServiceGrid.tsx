@@ -52,21 +52,30 @@ export function ServiceGrid({ detailed = false }: ServiceGridProps) {
             {stackedServices.map((item, index) => (
               <article
                 key={item.slug}
-                className="service-stack-card overflow-hidden rounded-2xl border border-navy-950/10 bg-white shadow-soft lg:sticky"
+                className={`service-stack-card overflow-hidden rounded-2xl border shadow-soft lg:sticky ${
+                  index === 1 ? "border-navy-900 bg-navy-950 text-white" : "border-navy-950/10 bg-white text-navy-950"
+                }`}
                 style={{ top: `${96 + index * 18}px`, zIndex: 10 + index }}
               >
                 <div className={`grid min-h-[520px] lg:grid-cols-2 ${index % 2 === 1 ? "lg:[&>*:first-child]:order-2" : ""}`}>
                   <div className="flex flex-col justify-center p-6 sm:p-8 lg:p-12">
-                    <div className="inline-flex w-fit items-center rounded-full bg-gold-500/12 px-3 py-1 text-xs font-black uppercase tracking-[0.16em] text-gold-600">
+                    <div className={`inline-flex w-fit items-center rounded-full px-3 py-1 text-xs font-black uppercase tracking-[0.12em] ${
+                      index === 1 ? "bg-white/10 text-gold-400" : "bg-gold-500/12 text-gold-600"
+                    }`}>
                       {item.eyebrow}
                     </div>
-                    <h3 className="mt-5 max-w-md text-3xl font-black leading-tight text-navy-950 sm:text-4xl">
+                    <h3 className="mt-5 max-w-md text-3xl font-black leading-tight sm:text-4xl">
                       {item.service.title}
                     </h3>
-                    <p className="mt-4 max-w-md text-base leading-7 text-navy-950/68">
+                    <p className={`mt-4 max-w-md text-base leading-7 ${index === 1 ? "text-white/72" : "text-navy-950/68"}`}>
                       {item.text}
                     </p>
-                    <Link href={`/services#${item.slug}`} className="mt-7 inline-flex items-center gap-2 text-sm font-bold text-gold-600 hover:text-navy-950">
+                    <Link
+                      href={`/services#${item.slug}`}
+                      className={`mt-7 inline-flex items-center gap-2 text-sm font-bold ${
+                        index === 1 ? "text-gold-400 hover:text-white" : "text-gold-600 hover:text-navy-950"
+                      }`}
+                    >
                       Learn more
                       <ArrowRight size={16} aria-hidden="true" />
                     </Link>
@@ -94,7 +103,7 @@ export function ServiceGrid({ detailed = false }: ServiceGridProps) {
         ) : null}
         {!detailed ? (
           <div className="mt-8 text-center">
-            <ButtonLink href="/services" variant="light">
+            <ButtonLink href="/services" className="px-7">
               See all services
             </ButtonLink>
           </div>
