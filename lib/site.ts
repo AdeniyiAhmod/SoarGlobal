@@ -212,3 +212,36 @@ export const resourceItems = [
     text: "Company updates and trade notes for customers in Northern Ireland and beyond.",
   },
 ];
+
+export const faqs = [
+  {
+    question: "Can you help with procurement and shipping together?",
+    answer:
+      "Yes. We can help source goods, coordinate supplier handover and plan the freight route so the movement is handled as one joined-up process.",
+  },
+  {
+    question: "Do you support businesses and individuals?",
+    answer:
+      "Yes. We work with SMEs, growing trade businesses and individuals who need clear support for sourcing, import, export or delivery.",
+  },
+  {
+    question: "What information do you need for a quote?",
+    answer:
+      "Share what you need moved or sourced, the origin and destination, estimated size or weight, timeline and any documents you already have.",
+  },
+  {
+    question: "Can you help with vehicle export?",
+    answer:
+      "Yes. We support vehicle procurement, export coordination and documentation guidance for cars, vans, parts and commercial stock.",
+  },
+  {
+    question: "Do you handle international parcels?",
+    answer:
+      "Yes. We can advise on practical parcel shipping options for personal, retail and business deliveries across international routes.",
+  },
+  {
+    question: "Where is Soar Global based?",
+    answer:
+      "We are based in Belfast, Northern Ireland, with a partner network for local and international trade movements.",
+  },
+];
