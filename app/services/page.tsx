@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { CtaBand } from "@/components/CtaBand";
 import { ServiceGrid } from "@/components/ServiceGrid";
 
 export const metadata: Metadata = {
@@ -12,7 +11,6 @@ export default function ServicesPage() {
     <>
       <h1 className="sr-only">Services</h1>
       <ServiceGrid detailed />
-      <CtaBand />
     </>
   );
 }
