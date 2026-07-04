@@ -36,3 +36,14 @@ Recommended hero spec:
 Supporting services image:
 - `public/images/what-we-handle.png`
 - Best as a simple logistics scene with vehicle, warehouse, cargo, or dispatch activity.
+
+Home service card assets:
+- `public/images/service-procurement.png`
+- `public/images/service-freight.png`
+- `public/images/service-automotive.png`
+
+Recommended service card spec:
+- Aspect ratio: landscape, works around `4:3` and `16:10` crops.
+- Subject: one clear operational scene per service.
+- Style: realistic, bright, commercial, uncluttered.
+- Avoid: readable text, logos, number plates, watermarks, fake UI, or collage-style composites.

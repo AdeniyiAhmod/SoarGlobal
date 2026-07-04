@@ -15,7 +15,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-navy-950/10 bg-white/95 backdrop-blur">
-      <div className="container-shell flex min-h-20 items-center justify-between gap-4 py-3">
+      <div className="mx-auto flex min-h-20 w-full items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-10 2xl:px-14">
         <Brand compact />
         <nav className="hidden items-center gap-8 md:flex" aria-label="Primary navigation">
           {navItems.map((item) => {
