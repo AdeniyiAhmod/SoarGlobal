@@ -71,6 +71,31 @@ function validate(payload: EnquiryPayload) {
   return null;
 }
 
+function getErrorMessage(error: unknown) {
+  if (!error) {
+    return "Unknown email provider error.";
+  }
+
+  if (typeof error === "string") {
+    return error;
+  }
+
+  if (typeof error === "object") {
+    const candidate = error as { message?: string; name?: string };
+    if (candidate.message) {
+      return candidate.message;
+    }
+
+    try {
+      return JSON.stringify(error);
+    } catch {
+      return candidate.name || "Unknown email provider error.";
+    }
+  }
+
+  return "Unknown email provider error.";
+}
+
 export async function POST(request: NextRequest) {
   try {
     const ip = getClientIp(request);
@@ -134,8 +159,23 @@ export async function POST(request: NextRequest) {
     });
 
     if (error) {
-      console.error("Resend enquiry error:", error);
-      return NextResponse.json({ error: "Failed to send email. Please try again." }, { status: 500 });
+      const providerMessage = getErrorMessage(error);
+      console.error("Resend enquiry error:", {
+        providerMessage,
+        from,
+        recipient,
+        formType,
+      });
+
+      return NextResponse.json(
+        {
+          error:
+            process.env.NODE_ENV === "production"
+              ? "Email provider rejected the message. Check the sender domain and Resend configuration."
+              : providerMessage,
+        },
+        { status: 500 },
+      );
     }
 
     return NextResponse.json({ success: true, id: data?.id });
