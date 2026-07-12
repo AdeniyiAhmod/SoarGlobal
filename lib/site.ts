@@ -30,8 +30,8 @@ export const contact = {
   email: "info@soarglobals.com",
   phone: "+44 28 95 322 110",
   phoneHref: "tel:+442895322110",
-  whatsapp: "+44 7930 006 681",
-  whatsappHref: "https://wa.me/447930006681",
+  whatsapp: "+44 7366 477344",
+  whatsappHref: "https://wa.me/447366477344",
   address: "Suite 6, 129 University Street, Belfast, BT7 1HP, United Kingdom",
   shortAddress: "Suite 6, 129 University Street, Belfast",
 };

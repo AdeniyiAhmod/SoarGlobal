@@ -42,6 +42,11 @@ function clean(value: unknown) {
   return typeof value === "string" ? value.trim() : "";
 }
 
+function cleanEnvValue(value: string | undefined, fallback: string) {
+  const cleaned = clean(value).replace(/^['"]+|['"]+$/g, "");
+  return cleaned || fallback;
+}
+
 function escapeHtml(value: string) {
   return value
     .replace(/&/g, "&amp;")
@@ -129,8 +134,8 @@ export async function POST(request: NextRequest) {
     const service = clean(payload.service);
     const route = clean(payload.route);
     const message = clean(payload.message);
-    const recipient = process.env.CONTACT_EMAIL || "info@soarglobals.com";
-    const from = process.env.RESEND_FROM || "Soar Global <onboarding@resend.dev>";
+    const recipient = cleanEnvValue(process.env.CONTACT_EMAIL, "info@soarglobals.com");
+    const from = cleanEnvValue(process.env.RESEND_FROM, "Soar Global <onboarding@resend.dev>");
 
     const { data, error } = await resend.emails.send({
       from,
@@ -169,7 +174,7 @@ export async function POST(request: NextRequest) {
 
       return NextResponse.json(
         {
-          error: providerMessage,
+          error: "Failed to send email. Please try again or contact us directly.",
         },
         { status: 500 },
       );

@@ -33,7 +33,7 @@ The site builds without email environment variables, so it can be deployed for a
 ```bash
 RESEND_API_KEY=
 CONTACT_EMAIL=info@soarglobals.com
-RESEND_FROM="Soar Global <hello@soarglobals.com>"
+RESEND_FROM=Soar Global <info@soarglobals.com>
 ```
 
 `RESEND_FROM` must use a sender domain verified in Resend. Until that is ready, direct phone, email and WhatsApp links still work on the live site.
