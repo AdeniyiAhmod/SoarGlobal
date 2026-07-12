@@ -16,7 +16,6 @@ const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KE
 const rateLimit = new Map<string, { count: number; resetAt: number }>();
 const windowMs = 60_000;
 const maxRequests = 5;
-const emailDebugEnabled = process.env.EMAIL_DEBUG === "true";
 
 function getClientIp(request: NextRequest) {
   return request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
@@ -170,10 +169,7 @@ export async function POST(request: NextRequest) {
 
       return NextResponse.json(
         {
-          error:
-            process.env.NODE_ENV === "production" && !emailDebugEnabled
-              ? "Email provider rejected the message. Check the sender domain and Resend configuration."
-              : providerMessage,
+          error: providerMessage,
         },
         { status: 500 },
       );
