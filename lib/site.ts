@@ -32,8 +32,8 @@ export const contact = {
   phoneHref: "tel:+442895322110",
   whatsapp: "+44 7930 006 681",
   whatsappHref: "https://wa.me/447930006681",
-  address: "Unit 12, Duncrue Industrial Estate, Belfast, BT3 9BP, Northern Ireland",
-  shortAddress: "Belfast, Northern Ireland",
+  address: "Suite 6, 129 University Street, Belfast, BT7 1HP, United Kingdom",
+  shortAddress: "Suite 6, 129 University Street, Belfast",
 };
 
 export const navItems = [
