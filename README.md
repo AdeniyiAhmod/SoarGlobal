@@ -34,9 +34,12 @@ The site builds without email environment variables, so it can be deployed for a
 RESEND_API_KEY=
 CONTACT_EMAIL=info@soarglobals.com
 RESEND_FROM="Soar Global <hello@soarglobals.com>"
+EMAIL_DEBUG=false
 ```
 
 `RESEND_FROM` must use a sender domain verified in Resend. Until that is ready, direct phone, email and WhatsApp links still work on the live site.
+
+Set `EMAIL_DEBUG=true` temporarily when you need the production `/api/enquiry` route to return the raw provider rejection message for troubleshooting. Turn it off after diagnosis.
 
 ## Image Specs
 
