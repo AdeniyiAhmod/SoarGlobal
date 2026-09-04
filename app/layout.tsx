@@ -25,7 +25,7 @@ export const metadata: Metadata = {
       "Connecting Northern Ireland businesses and individuals to global markets.",
     url: "https://soarglobals.com",
     siteName: "Soar Global",
-    images: [{ url: "/images/soar-logo-mark.png", width: 512, height: 384 }],
+    images: [{ url: "/images/Soar.png", width: 512, height: 384 }],
     locale: "en_GB",
     type: "website",
   },

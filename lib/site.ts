@@ -28,12 +28,14 @@ import {
 
 export const contact = {
   email: "info@soarglobals.com",
-  phone: "+44 28 95 322 110",
-  phoneHref: "tel:+442895322110",
+  phone: "+447423115604",
+  phoneHref: "tel:+447423115604",
   whatsapp: "+44 7366 477344",
   whatsappHref: "https://wa.me/447366477344",
-  address: "Suite 6, 129 University Street, Belfast, BT7 1HP, United Kingdom",
-  shortAddress: "Suite 6, 129 University Street, Belfast",
+  address: "Unit 424, Moat House, 54 Bloomfield Avenue, Belfast. BT5 5AD",
+  shortAddress: "Unit 424, Moat House, 54 Bloomfield Avenue, Belfast",
+  nigerianAddress: "Suite 13, Nacho Complex Ground Floor M/M Int'l Airport, Ikeja, Lagos",
+  nigerianPhone: ['08107209909','08060058468'],
 };
 
 export const navItems = [
