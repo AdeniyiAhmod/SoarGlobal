@@ -17,10 +17,15 @@ export default function ContactPage() {
             <h1 className="text-3xl font-bold tracking-tight sm:font-extrabold">Contact Soar Global</h1>
             <p className="mt-3 text-sm leading-6 text-white/68">Call, email or send a short enquiry.</p>
             <div className="mt-6 grid gap-5">
+              <p className="font-semibold">Visit us in Northern Ireland</p>
               <ContactLink icon={MapPin} title="Visit us" value={contact.address} href="/contact" />
               <ContactLink icon={Phone} title="Call us" value={contact.phone} href={contact.phoneHref} />
               <ContactLink icon={Mail} title="Email us" value={contact.email} href={`mailto:${contact.email}`} />
               <ContactLink icon={Send} title="WhatsApp" value={contact.whatsapp} href={contact.whatsappHref} />
+              <p className="font-semibold">Visit us in Nigeria</p>
+              <ContactLink icon={MapPin} title="Visit us" value={contact.nigerianAddress} href="/contact" />
+              <ContactLink icon={Phone} title="Call us" value={contact.nigerianPhone[0]} href={`tel:${contact.nigerianPhone[0]}`} />
+              <ContactLink icon={Phone} title="Call us" value={contact.nigerianPhone[1]} href={`tel:${contact.nigerianPhone[1]}`} />
             </div>
           </div>
           <QuoteForm
